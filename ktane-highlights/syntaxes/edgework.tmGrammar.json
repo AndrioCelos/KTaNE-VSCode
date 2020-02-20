@@ -1,0 +1,155 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "text.ktane.edgework",
+	"patterns": [
+		{ "include": "#edgework" },
+		{ "include": "#heading" },
+		{ "include": "#colours" },
+		{ "include": "#colourblock" }
+	],
+	"repository": {
+		"edgework": {
+			"name": "meta.edgework",
+			"begin": "\\A(?=[\\d\\-_]+B\\b)",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "meta.indicator.lit",
+					"match": "(?i)\\*[A-Z]+\\b"
+				},
+				{
+					"name": "meta.indicator.unlit",
+					"match": "(?i)[._\\-][A-Z]+\\b"
+				},
+				{
+					"name": "meta.edgework.serial",
+					"begin": "(?i)(?=\\w{6}$)",
+					"end": "$",
+					"patterns": [
+						{
+							"name": "invalid.illegal.serial",
+							"match": "(?i)[OY]|[A-Z](?=(?:\\w{3})?\\b)|[0-9](?=\\w\\w?\\b)"
+						},
+						{
+							"name": "meta.serial.letter.vowel",
+							"match": "(?i)[AEIU]"
+						},
+						{
+							"name": "meta.serial.letter.consonant",
+							"match": "(?i)[A-Z]"
+						},
+						{
+							"name": "meta.serial.digit.even",
+							"match": "[02468]"
+						},
+						{
+							"name": "meta.serial.digit.odd",
+							"match": "[13579]"
+						}
+					]
+				}
+			]
+		},
+		"colours": {
+			"patterns": [
+				{ "include": "#colour.red" },
+				{ "include": "#colour.brown" },
+				{ "include": "#colour.orange" },
+				{ "include": "#colour.yellow" },
+				{ "include": "#colour.green" },
+				{ "include": "#colour.lime" },
+				{ "include": "#colour.cyan" },
+				{ "include": "#colour.blue" },
+				{ "include": "#colour.purple" },
+				{ "include": "#colour.magenta" },
+				{ "include": "#colour.pink" },
+				{ "include": "#colour.white" },
+				{ "include": "#colour.grey" },
+				{ "include": "#colour.black" }
+			]
+		},
+		"colour.red": {
+			"name": "colour.red",
+			"match": "(?i)\\bred\\b"
+		},
+		"colour.brown": {
+			"name": "colour.brown",
+			"match": "(?i)\\bbrown\\b"
+		},
+		"colour.orange": {
+			"name": "colour.orange",
+			"match": "(?i)\\borange\\b"
+		},
+		"colour.yellow": {
+			"name": "colour.yellow",
+			"match": "(?i)\\byellow\\b"
+		},
+		"colour.lime": {
+			"name": "colour.lime",
+			"match": "(?i)\\blime\\b"
+		},
+		"colour.green": {
+			"name": "colour.green",
+			"match": "(?i)\\bgreen\\b"
+		},
+		"colour.cyan": {
+			"name": "colour.cyan",
+			"match": "(?i)\\bcyan\\b"
+		},
+		"colour.blue": {
+			"name": "colour.blue",
+			"match": "(?i)\\bblue\\b"
+		},
+		"colour.purple": {
+			"name": "colour.purple",
+			"match": "(?i)\\bpurple\\b"
+		},
+		"colour.magenta": {
+			"name": "colour.magenta",
+			"match": "(?i)\\bmagenta\\b"
+		},
+		"colour.pink": {
+			"name": "colour.pink",
+			"match": "(?i)\\bpink\\b"
+		},
+		"colour.white": {
+			"name": "colour.white",
+			"match": "(?i)\\bwhite\\b"
+		},
+		"colour.grey": {
+			"name": "colour.grey",
+			"match": "(?i)\\bgr[ae]y\\b"
+		},
+		"colour.black": {
+			"name": "colour.black",
+			"match": "(?i)\\bblack\\b"
+		},
+		"heading": {
+			"name": "markup.heading",
+			"match": "^#.*"
+		},
+		"colourblock": {
+			"name": "meta.colourblock",
+			"begin": "`",
+			"end": "`",
+			"patterns": [
+				{ "include": "#heading" },
+				{ "include": "#colours" },
+				{ "name": "colour.red"    , "match": "R(?![a-z])" },
+				{ "name": "colour.orange" , "match": "O(?![a-z])" },
+				{ "name": "colour.brown"  , "match": "N(?![a-z])" },
+				{ "name": "colour.yellow" , "match": "Y(?![a-z])" },
+				{ "name": "colour.green"  , "match": "G(?![a-z])" },
+				{ "name": "colour.lime"   , "match": "L(?![a-z])" },
+				{ "name": "colour.cyan"   , "match": "C(?![a-z])" },
+				{ "name": "colour.blue"   , "match": "B(?![a-z])" },
+				{ "name": "colour.purple" , "match": "P(?![a-z])" },
+				{ "name": "colour.magenta", "match": "M(?![a-z])" },
+				{ "name": "colour.pink"   , "match": "I(?![a-z])" },
+				{ "name": "colour.white"  , "match": "W(?![a-z])" },
+				{ "name": "colour.grey"   , "match": "[EA](?![a-z])" },
+				{ "name": "colour.black"  , "match": "K(?![a-z])" }
+			]
+		}
+	}
+}

@@ -1,0 +1,293 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "text.ktane.forgeteverything",
+	"patterns": [
+		{ "include": "#stages" },
+		{ "include": "#header" }
+	],
+	"repository": {
+		"stages": {
+			"name": "meta.stagelist.forgeteverything",
+			"begin": "\\A(?=-)",
+			"end": "^(?==)",
+			"beginCaptures": {
+			},
+			"patterns": [
+				{ "include": "#stage1andon" }
+			]
+		},
+
+		"stage1andon": {
+			"name": "meta.stageandon.1.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.1.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{9}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage2andon" }
+			]
+		},
+		"stage2andon": {
+			"name": "meta.stageandon.2.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.2.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{8}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage3andon" }
+			]
+		},
+		"stage3andon": {
+			"name": "meta.stageandon.3.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.3.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{7}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage4andon" }
+			]
+		},
+		"stage4andon": {
+			"name": "meta.stageandon.4.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.4.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{6}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage5andon" }
+			]
+		},
+		"stage5andon": {
+			"name": "meta.stageandon.5.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.5.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{5}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage6andon" }
+			]
+		},
+		"stage6andon": {
+			"name": "meta.stageandon.6.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.6.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{4}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage7andon" }
+			]
+		},
+		"stage7andon": {
+			"name": "meta.stageandon.7.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.7.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{3}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage8andon" }
+			]
+		},
+		"stage8andon": {
+			"name": "meta.stageandon.8.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.8.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{2}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage9andon" }
+			]
+		},
+		"stage9andon": {
+			"name": "meta.stageandon.9.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.9.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{1}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage10andon" }
+			]
+		},
+		"stage10andon": {
+			"name": "meta.stageandon.10.forgeteverything",
+			"begin": "^(?!=).*\\n",
+			"end": "^(?==)",
+			"beginCaptures": {
+				"0": {
+					"name": "meta.stage.10.forgeteverything",
+					"patterns": [
+						{ "include": "#colours" }, { "include": "#yesorno" },
+						{
+							"name": "meta.significantdigit.forgeteverything",
+							"match": "\\d(?=\\d{0}$)"
+						}
+					]
+				}
+			},
+			"patterns": [
+				{ "include": "#stage1andon" }
+			]
+		},
+
+		"stage": {
+			"name": "meta.stage.forgeteverything",
+			"begin": "^",
+			"end": "$",
+			"patterns": [
+				{ "include": "#colours" },
+				{ "include": "#yesorno" }
+			]
+		},
+
+
+		"header": {
+			"name": "markup.heading",
+			"match": "(?i)^[D\\-=#].*"
+		},
+		"yesorno": {
+			"patterns": [
+				{
+					"name": "constant.language.true.forgeteverything",
+					"match": "(?i)\\byes\\b"
+				},
+				{
+					"name": "constant.language.false.forgeteverything",
+					"match": "(?i)\\bno\\b"
+				}
+			]
+		},
+		"colours": {
+			"patterns": [
+				{ "include": "#colour.red" },
+				{ "include": "#colour.yellow" },
+				{ "include": "#colour.green" },
+				{ "include": "#colour.blue" },
+				{ "include": "#colour.red2" },
+				{ "include": "#colour.yellow2" },
+				{ "include": "#colour.green2" },
+				{ "include": "#colour.blue2" }
+			]
+		},
+		"colour.red": {
+			"name": "colour.red",
+			"match": "(?i)\\b(?:red|(?=[YGB]*R[YGB]*R)[RYGB]{3})\\b"
+		},
+		"colour.yellow": {
+			"name": "colour.yellow",
+			"match": "(?i)\\b(?:yellow|(?=[RGB]*Y[RGB]*Y)[RYGB]{3})\\b"
+		},
+		"colour.green": {
+			"name": "colour.green",
+			"match": "(?i)\\b(?:green|(?=[RYB]*G[RYB]*G)[RYGB]{3})\\b"
+		},
+		"colour.blue": {
+			"name": "colour.blue",
+			"match": "(?i)\\b(?:blue|(?=[RYG]*B[RYG]*B)[RYGB]{3})\\b"
+		},
+		"colour.red2": {
+			"name": "colour.red",
+			"match": "(?i)\\b[YGB]{3}\\b"
+		},
+		"colour.yellow2": {
+			"name": "colour.yellow",
+			"match": "(?i)\\b[RGB]{3}\\b"
+		},
+		"colour.green2": {
+			"name": "colour.green",
+			"match": "(?i)\\b[RYB]{3}\\b"
+		},
+		"colour.blue2": {
+			"name": "colour.blue",
+			"match": "(?i)\\b[RYG]{3}\\b"
+		}
+	}
+}

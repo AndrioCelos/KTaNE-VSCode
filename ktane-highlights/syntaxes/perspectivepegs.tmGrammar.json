@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "text.ktane.perspectivepegs",
+	"patterns": [
+		{ "include": "#colours" }
+	],
+	"repository": {
+		"colours": {
+			"patterns": [
+				{ "include": "#colour.red" },
+				{ "include": "#colour.yellow" },
+				{ "include": "#colour.green" },
+				{ "include": "#colour.blue" },
+				{ "include": "#colour.purple" }
+			]
+		},
+		"colour.red": {
+			"name": "colour.red",
+			"match": "(?<![a-z])(?i)R(?:ed)?"
+		},
+		"colour.yellow": {
+			"name": "colour.yellow",
+			"match": "(?<![a-z])(?i)Y(?:ellow)?"
+		},
+		"colour.green": {
+			"name": "colour.green",
+			"match": "(?<![a-z])(?i)G(?:reen)?"
+		},
+		"colour.blue": {
+			"name": "colour.blue",
+			"match": "(?<![a-z])(?i)B(?:lue)?"
+		},
+		"colour.purple": {
+			"name": "colour.purple",
+			"match": "(?<![a-z])(?i)P(?:urple)?"
+		}
+	}
+}

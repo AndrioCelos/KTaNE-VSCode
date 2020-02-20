@@ -1,0 +1,88 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "text.ktane.chess",
+	"patterns": [
+		{ "include": "#board" },
+		{ "include": "#header" }
+	],
+	"repository": {
+		"board": {
+			"name": "meta.board.chess",
+			"begin": "(?i)^(?=6 [.\\-*NBRQK])",
+			"end": "^  abcdef$",
+			"endCaptures": {
+				"0": {
+					"name": "comment.block.chess"
+				}
+			},
+			"patterns": [
+				{ "include": "#boardrowandon0" }
+			]
+		},
+		"boardrowandon0": {
+			"begin": "^([1-6]) +(\\S*)",
+			"end": "^(?= )",
+			"beginCaptures": {
+				"1": { "name": "comment.block.chess" },
+				"2": {
+					"name": "meta.boardbody.0.chess",
+					"patterns": [
+						{
+							"match": "(?i)(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))",
+							"captures": {
+								 "1": { "name": "meta.space.white.chess" },
+								 "2": { "name": "meta.piece.white.chess" },
+								 "3": { "name": "meta.space.black.chess" },
+								 "4": { "name": "meta.piece.black.chess" },
+								 "5": { "name": "meta.space.white.chess" },
+								 "6": { "name": "meta.piece.white.chess" },
+								 "7": { "name": "meta.space.black.chess" },
+								 "8": { "name": "meta.piece.black.chess" },
+								 "9": { "name": "meta.space.white.chess" },
+								"10": { "name": "meta.piece.white.chess" },
+								"11": { "name": "meta.space.black.chess" },
+								"12": { "name": "meta.piece.black.chess" }
+							}
+						}
+					]
+				}
+			},
+			"patterns": [ { "include": "#boardrowandon1" } ]
+		},
+		"boardrowandon1": {
+			"begin": "^([1-6]) +(\\S*)",
+			"end": "^(?= )",
+			"beginCaptures": {
+				"1": { "name": "comment.block.chess" },
+				"2": {
+					"name": "meta.boardbody.1.chess",
+					"patterns": [
+						{
+							"match": "(?i)(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))(?:([ .\\-*])|([NBRQK]))",
+							"captures": {
+								 "1": { "name": "meta.space.black.chess" },
+								 "2": { "name": "meta.piece.black.chess" },
+								 "3": { "name": "meta.space.white.chess" },
+								 "4": { "name": "meta.piece.white.chess" },
+								 "5": { "name": "meta.space.black.chess" },
+								 "6": { "name": "meta.piece.black.chess" },
+								 "7": { "name": "meta.space.white.chess" },
+								 "8": { "name": "meta.piece.white.chess" },
+								 "9": { "name": "meta.space.black.chess" },
+								"10": { "name": "meta.piece.black.chess" },
+								"11": { "name": "meta.space.white.chess" },
+								"12": { "name": "meta.piece.white.chess" }
+							}
+						}
+					]
+				}
+			},
+			"patterns": [ { "include": "#boardrowandon0" } ]
+		},
+
+		"header": {
+			"name": "markup.heading",
+			"match": "(?i)^#.*"
+		}
+	}
+}

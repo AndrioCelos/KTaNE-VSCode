@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "text.ktane.forgetthemall",
+	"patterns": [
+		{ "include": "#colours" },
+		{ "include": "#heading" }
+	],
+	"repository": {
+		"colours": {
+			"patterns": [
+				{ "include": "#colour.red" },
+				{ "include": "#colour.brown" },
+				{ "include": "#colour.orange" },
+				{ "include": "#colour.yellow" },
+				{ "include": "#colour.lime" },
+				{ "include": "#colour.green" },
+				{ "include": "#colour.cyan" },
+				{ "include": "#colour.blue" },
+				{ "include": "#colour.purple" },
+				{ "include": "#colour.magenta" },
+				{ "include": "#colour.pink" },
+				{ "include": "#colour.white" },
+				{ "include": "#colour.grey" },
+				{ "include": "#colour.black" },
+				{ "include": "#heading" }
+			]
+		},
+		"colour.red": {
+			"name": "colour.red",
+			"match": "(?i)\\bred\\b"
+		},
+		"colour.orange": {
+			"name": "colour.orange",
+			"match": "(?i)\\borange\\b"
+		},
+		"colour.brown": {
+			"name": "colour.brown",
+			"match": "(?i)\\bbrown\\b"
+		},
+		"colour.yellow": {
+			"name": "colour.yellow",
+			"match": "(?i)\\byellow\\b"
+		},
+		"colour.lime": {
+			"name": "colour.lime",
+			"match": "(?i)\\blime\\b"
+		},
+		"colour.green": {
+			"name": "colour.darkgreen",
+			"match": "(?i)\\bgreen\\b"
+		},
+		"colour.cyan": {
+			"name": "colour.cyan",
+			"match": "(?i)\\bcyan\\b"
+		},
+		"colour.blue": {
+			"name": "colour.blue",
+			"match": "(?i)\\bblue\\b"
+		},
+		"colour.purple": {
+			"name": "colour.purple",
+			"match": "(?i)\\bpurple\\b"
+		},
+		"colour.magenta": {
+			"name": "colour.magenta",
+			"match": "(?i)\\bmagenta\\b"
+		},
+		"colour.pink": {
+			"name": "colour.pink",
+			"match": "(?i)\\bpink\\b"
+		},
+		"colour.white": {
+			"name": "colour.white",
+			"match": "(?i)\\bwhite\\b"
+		},
+		"colour.grey": {
+			"name": "colour.grey",
+			"match": "(?i)\\bgr[ea]y\\b"
+		},
+		"colour.black": {
+			"name": "colour.black",
+			"match": "(?i)\\bblack\\b"
+		},
+		"heading": {
+			"name": "markup.heading",
+			"match": "^(?:#.*|-+$)"
+		}
+	}
+}

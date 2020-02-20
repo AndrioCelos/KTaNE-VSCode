@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.trimTrailingWhitespace": false,
+		"editor.tabSize": 10,
+		"editor.detectIndentation": false,
+		"editor.quickSuggestions": {
+			"other": false,
+			"comments": false,
+			"strings": false
+		},
+		"files.trimFinalNewlines": false,
+		"workbench.colorTheme": "KTaNE",
+		"files.associations": {
+			"Main.md": "ktane-edgework",
+			"Binary Tree.md": "ktane-binarytree",
+			"Chess.md": "ktane-chess",
+			"Forget Everything.md": "ktane-forgeteverything",
+			"Forget Me Not.md": "ktane-forgetmenot",
+			"Forget Them All.md": "ktane-forgetthemall",
+			"Perspective Pegs.md": "ktane-perspectivepegs"
+		},
+		"editor.fontSize": 18,
+		"background.enabled": true,
+		"background.useDefault": false,
+		"background.customImages": [
+			"https://keeptalkinggame.com/wp-content/uploads/2018/11/KeepTalkingLogo_AnyBG_Mobile.png",
+			"https://keeptalkinggame.com/wp-content/uploads/2018/11/KeepTalkingLogo_AnyBG_Mobile.png",
+			"https://keeptalkinggame.com/wp-content/uploads/2018/11/KeepTalkingLogo_AnyBG_Mobile.png"
+		],
+		"background.useFront": true,
+		"background.style": {
+			"background-position": "center",
+			"opacity": 0.15
+		},
+		"[json]": { "editor.fontSize": 14, "editor.tabSize": 4 },
+		"[jsonc]": { "editor.fontSize": 14, "editor.tabSize": 4 }
+	}
+}

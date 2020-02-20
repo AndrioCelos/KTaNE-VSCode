@@ -1,0 +1,103 @@
+{
+	"name": "ktane-highlights",
+	"displayName": "KTaNE Highlights",
+	"description": "KTaNE Highlights",
+	"version": "1.0",
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Themes"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "ktane-binarytree",
+				"aliases": [ "KTaNE Binary Tree" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "ktane-chess",
+				"aliases": [ "KTaNE Chess" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "ktane-edgework",
+				"aliases": [ "KTaNE Edgework" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "ktane-perspectivepegs",
+				"aliases": [ "KTaNE Perspective Pegs" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "ktane-forgeteverything",
+				"aliases": [ "KTaNE Forget Everything" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "ktane-forgetmenot",
+				"aliases": [ "KTaNE Forget Me Not" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "ktane-forgetthemall",
+				"aliases": [ "KTaNE Forget Them All" ],
+				"extensions": [ ],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "ktane-edgework",
+				"scopeName": "text.ktane.edgework",
+				"path": "./syntaxes/edgework.tmGrammar.json"
+			},
+			{
+				"language": "ktane-binarytree",
+				"scopeName": "text.ktane.binarytree",
+				"path": "./syntaxes/binaryTree.tmGrammar.json"
+			},
+			{
+				"language": "ktane-chess",
+				"scopeName": "text.ktane.chess",
+				"path": "./syntaxes/chess.tmGrammar.json"
+			},
+			{
+				"language": "ktane-perspectivepegs",
+				"scopeName": "text.ktane.perspectivepegs",
+				"path": "./syntaxes/perspectivepegs.tmGrammar.json"
+			},
+			{
+				"language": "ktane-forgeteverything",
+				"scopeName": "text.ktane.forgeteverything",
+				"path": "./syntaxes/forgeteverything.tmGrammar.json"
+			},
+			{
+				"language": "ktane-forgetmenot",
+				"scopeName": "text.ktane.forgetmenot",
+				"path": "./syntaxes/forgetmenot.tmGrammar.json"
+			},
+			{
+				"language": "ktane-forgetthemall",
+				"scopeName": "text.ktane.forgetthemall",
+				"path": "./syntaxes/forgetthemall.tmGrammar.json"
+			}
+		],
+		"themes": [
+			{
+				"label": "KTaNE",
+				"uiTheme": "vs-dark",
+				"path": "./themes/KTaNE-color-theme.json"
+			}
+		]
+	}
+}

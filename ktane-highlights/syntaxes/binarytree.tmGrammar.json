@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "text.ktane.binarytree",
+	"patterns": [
+		{ "include": "#colours" },
+		{ "include": "#header" }
+	],
+	"repository": {
+		"header": {
+			"name": "markup.tableheader",
+			"match": "^Letter.*"
+		},
+		"colours": {
+			"patterns": [
+				{ "include": "#colour.red" },
+				{ "include": "#colour.orange" },
+				{ "include": "#colour.yellow" },
+				{ "include": "#colour.green" },
+				{ "include": "#colour.cyan" },
+				{ "include": "#colour.blue" },
+				{ "include": "#colour.magenta" },
+				{ "include": "#colour.gray" }
+			]
+		},
+		"colour.red": {
+			"name": "colour.red",
+			"match": "\\bR\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.orange": {
+			"name": "colour.orange",
+			"match": "\\bO\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.yellow": {
+			"name": "colour.yellow",
+			"match": "\\bY\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.green": {
+			"name": "colour.green",
+			"match": "\\bG\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.cyan": {
+			"name": "colour.cyan",
+			"match": "\\bC\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.blue": {
+			"name": "colour.blue",
+			"match": "\\bB\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.magenta": {
+			"name": "colour.magenta",
+			"match": "\\bM\\b(?=[^\\t\\n]*$)"
+		},
+		"colour.gray": {
+			"name": "colour.gray",
+			"match": "\\bA\\b(?=[^\\t\\n]*$)"
+		}
+	}
+}
